@@ -21,6 +21,7 @@ class Day3:
         return int(gamma_rate,2) * int(epsilon_rate,2)
     
     def solve_part2(self):
+        # it can be done better, but i don't care 
         oxygen_generator_rating_df = self._get_input_df()
         co2_scrubber_rating_df = self._get_input_df()
         puzzle_input_cols = oxygen_generator_rating_df.columns
