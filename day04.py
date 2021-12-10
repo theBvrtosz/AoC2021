@@ -101,41 +101,7 @@ if __name__ == '__main__':
     with open('./inputs/d4_input_numbers.txt') as f:
         calls = f.readlines()[0].split(',')
     
-    # boards = [BingoBoard(board_elements=board_elements) for board_elements in bingo_boards_elements]
-    # bingo_found = False
-    
-    # part1 
-    # for call in calls:
-    #     for board in boards:
-    #         board.mark_bingo_element(call)
-    #         bingo_found = board.has_bingo()
-    #         if bingo_found:
-    #             print(board.get_sum_of_unchecked() * int(call))
-    #             break 
-    #     if bingo_found:
-    #         break
-    
-    # #part2
-    # board_to_win = None
-    # element = None
-    # for call in calls:
-    #     for board in boards:
-    #         if not board.has_bingo():
-    #             board.mark_bingo_element(call)
-    #             if board.has_bingo():
-    #                 board_to_win = board
-    #                 element = call
-    
-    # print(board_to_win.get_sum_of_unchecked() * int(element))
-
     day4 = Day4(calls=calls, boards_elements=bingo_boards_elements)
     day4_part1_solution = day4.solve_part1()
     day4_part2_solution = day4.solve_part2()
     print(f'part 1 solution: {day4_part1_solution} \npart 2 solution: {day4_part2_solution}')
-
-
-
-
-
-
-        
